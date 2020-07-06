@@ -1,8 +1,8 @@
 --------------------------------------------------------
 --  DDL for Table STUDENT
 --------------------------------------------------------
-
-  CREATE TABLE "C##TEST"."STUDENT" 
+-- 创建表student表
+CREATE TABLE "C##TEST"."STUDENT" 
    (	"ID" VARCHAR2(20 BYTE), 
 	"NAME" VARCHAR2(20 BYTE), 
 	"AGE" VARCHAR2(20 BYTE), 
@@ -16,13 +16,14 @@
   TABLESPACE "USERS" ;
 REM INSERTING into C##TEST.STUDENT
 SET DEFINE OFF;
+-- 插入数据
 Insert into C##TEST.STUDENT (ID,NAME,AGE,SEX) values ('001','zhangsan','18','male');
 Insert into C##TEST.STUDENT (ID,NAME,AGE,SEX) values ('002','lisi','20','female');
 
 --------------------------------------------------------
 --  DDL for Table SUBJECT
 --------------------------------------------------------
-
+-- 创建SUBJECT表
   CREATE TABLE "C##TEST"."SUBJECT" 
    (	"ID" VARCHAR2(20 BYTE), 
 	"SUBJECT" VARCHAR2(20 BYTE), 
@@ -37,13 +38,14 @@ Insert into C##TEST.STUDENT (ID,NAME,AGE,SEX) values ('002','lisi','20','female'
   TABLESPACE "USERS" ;
 REM INSERTING into C##TEST.SUBJECT
 SET DEFINE OFF;
+-- 插入数据
 Insert into C##TEST.SUBJECT (ID,SUBJECT,TEACHER,DESCRIPTION) values ('1001','Chinese','Mr.Wang','the exam is easy');
 Insert into C##TEST.SUBJECT (ID,SUBJECT,TEACHER,DESCRIPTION) values ('1002','math','Miss Liu','the exam is difficult');
 
 --------------------------------------------------------
 --  DDL for Table SCORE
 --------------------------------------------------------
-
+-- 创建score表
   CREATE TABLE "C##TEST"."SCORE" 
    (	"ID" VARCHAR2(20 BYTE), 
 	"STUDENT_ID" VARCHAR2(20 BYTE), 
@@ -58,6 +60,7 @@ Insert into C##TEST.SUBJECT (ID,SUBJECT,TEACHER,DESCRIPTION) values ('1002','mat
   TABLESPACE "USERS" ;
 REM INSERTING into C##TEST.SCORE
 SET DEFINE OFF;
+-- 插入数据
 Insert into C##TEST.SCORE (ID,STUDENT_ID,SUBJECT_ID,SCORE) values ('1','001','1001','80');
 Insert into C##TEST.SCORE (ID,STUDENT_ID,SUBJECT_ID,SCORE) values ('2','002','1002','60');
 Insert into C##TEST.SCORE (ID,STUDENT_ID,SUBJECT_ID,SCORE) values ('3','001','1001','70');
